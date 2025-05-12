@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.calculator {
+    width: 90%; /* Uses percentage for responsiveness */
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 20px;
+}
+
+.calculator h1 {
+    font-size: 2rem; /* Scales better on different screens */
+}
+
+.calculator h1 span {
+    color: #ebeb59;
+}
+
+.input-box {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Prevents breaking on small screens */
+}
+
+.input-box input {
+    flex: 1;
+    min-width: 150px; /* Prevents input from shrinking too much */
+    margin-right: 10px;
+    padding: 14px;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.input-box button {
+    background: #ebeb59;
+    border: 0;
+    outline: 0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 600px) {
+    .calculator {
+        margin-top: 5%;
+    }
+
+    .input-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px; /* Adds space between input and button */
+    }
+
+    .input-box input,
+    .input-box button {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .calculator h1 {
+        font-size: 1.5rem;
+    }
+}
+
+#result {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+#result span {
+    color: #ebeb59;
+}
